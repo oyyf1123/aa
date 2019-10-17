@@ -7,6 +7,7 @@ export default class StateDemo extends Component {
       arr:[1,2,3]
     }
   }
+  
   addItem = () => {
     this.setState(() => {
       this.state.arr.push(4);  // 先操作，后赋值
