@@ -4,17 +4,15 @@ export default class StateDemo extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      arr:[1,2,3]
+      arr:[0,1,2]
     }
   }
   
   addItem = () => {
-    this.setState(() => {
-      this.state.arr.push(4);  // 先操作，后赋值
-      return {
-        arr:this.state.arr
-      }
+    return this.setState({
+      arr:[...this.state.arr, this.state.arr.length]
     })
+   
   }
   render () {
     // console.log(arr);
@@ -23,6 +21,7 @@ export default class StateDemo extends Component {
     return (
       <div>
         <button onClick = {this.addItem}> 添加列表 </button>
+        <span>{arr}</span>
         <ul>
           {
             arr.map((item,index) => <li key = {index}>{item}</li>)

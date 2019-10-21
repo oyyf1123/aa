@@ -24,7 +24,7 @@ export default class StateComp extends Component {
     this.setState(() => {  // 要返回值，返回的是一个对象
       // console.log(1);    //输出的是 3 1 2  setState 是异步的
       return {
-        info:'别睡觉了'
+        info:'嘿嘿'
       }
     }, () => {
         // console.log(2); 在方法执行后  再执行此次callback

@@ -5,6 +5,7 @@ import StateComp from './components/StateComp';
 import StateDemo from './components/StateDemo';
 import Father from './components/Father';
 import ListItem from './components/ListItem';
+import HooksComponent from './components/HooksComponent';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <StateDemo />
       <Father />
       <ListItem/>
+      <HooksComponent />
     </div>
   );
 }
