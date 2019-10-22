@@ -2,7 +2,7 @@ import React from 'react';
 import './index.css';
 //  高阶组件是一个函数，接收一个组件作参数
 
-export const connect111 = (fn) => {
+export const connect = (fn) => {
   const obj = {
     name: 'ouyang',
     age: 20,
