@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import './App.css';
 import AnimateComp from './components/AnimateComp';
+import Banner from './components/Swiper';
 
 function App () {
   let [data, setData] = useState({
@@ -23,6 +24,8 @@ function App () {
     <div className="App">
       <button onClick = {handleFlag}> 动起来 </button>
       <AnimateComp {...data} />
+      <hr />
+      <Banner/>
     </div>
   );
 }
