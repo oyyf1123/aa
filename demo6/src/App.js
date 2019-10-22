@@ -23,5 +23,5 @@ function App({value}) {
 
 
 export default connect(()=>{
-  return 'sex';
+  return 'age';
 })(App)

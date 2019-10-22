@@ -28,23 +28,23 @@ export const connect = (fn) => {
   }
 }
 
-const HocComp = UiComponent => {
-  const name = '邹明'
-  return class x extends React.Component{
+// const HocComp = UiComponent => {
+//   const name = '邹明'
+//   return class x extends React.Component{
 
-    render () {
-      return (
-        <div>
-          <UiComponent name={name}/>
-          <div className='bar'>
-            <span>电影</span>
-            <span>影院</span>
-            <span>我的</span>
-          </div>
-        </div>
-      )
-    }
-  }
-}
+//     render () {
+//       return (
+//         <div>
+//           <UiComponent name={name}/>
+//           <div className='bar'>
+//             <span>电影</span>
+//             <span>影院</span>
+//             <span>我的</span>
+//           </div>
+//         </div>
+//       )
+//     }
+//   }
+// }
 
-export default HocComp;
+// export default HocComp;
