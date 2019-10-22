@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import './App.css';
 import GrandFather from './components/GrandFather';
+import ErrorBoundary from './components/ErrorBoundary';
 
 function App () {
   let [money, setMoney] = useState(2222);
@@ -12,12 +13,15 @@ function App () {
     setMoney( money - 1)
   }
 
-  useEffect(() => {
+  useEffect(() => {   
+    /* 这个api就相当于是componentDidMount 和componentDidUpdate componentWillReceiveProps*/
     document.title = money;
-    fetch('/mock.json')
+    fetch('/mock.json')    // 这里可以做数据请求
       .then(date => date.json())
       .then(res => setName(res.name))
       .catch(err => console.log(err))
+    
+    document.querySelector('p').style.background = 'yellow'   //这里也可以做DOM操作
   })
 
   return (
@@ -26,8 +30,10 @@ function App () {
       <p> 姓名：{name} </p>
       <h3> context通信 </h3>
       <button style = {{marginRight : '10px'}} onClick = {handleAdd}> + </button>
-      <button onClick = {handleMinus}> - </button>
-      <GrandFather/>
+      <button onClick={handleMinus}> - </button>
+      <ErrorBoundary>
+        <GrandFather/>
+      </ErrorBoundary>
     </div>
   );
 }

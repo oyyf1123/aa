@@ -3,7 +3,7 @@ import Father from './Father';
 import {qianContext} from '../context'
 
 const GrandFather = () => {
-  let [qian,setQian] = useState(5555)
+  let [qian] = useState(5555)
   return (
     <div>
       <qianContext.Provider value = {qian}>
