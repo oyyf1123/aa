@@ -1,0 +1,21 @@
+@import '~/../../../assets/global_style.scss';
+header{
+  width: 100%;
+  height: .505rem;
+  background: $themeColor;
+  display: flex;
+  align-items: center;
+  padding:0 .15rem;
+  box-sizing: border-box;
+  h1{
+    font-weight: 100;
+    font-size: .18rem;
+    color: #fff;
+    margin: 0;
+    flex: 1;
+  }
+  i{
+    font-size: .18rem;
+    color: #fff;
+  }
+}
