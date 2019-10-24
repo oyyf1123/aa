@@ -2,7 +2,7 @@ import React from 'react';
 import './index.css';
 //  高阶组件是一个函数，接收一个组件作参数
 
-export const connect111 = (fn) => {
+export const connect = (fn) => {
   const obj = {
     name: 'ouyang',
     age: 20,
@@ -28,23 +28,23 @@ export const connect111 = (fn) => {
   }
 }
 
-const HocComp = UiComponent => {
-  const name = '邹明'
-  return class x extends React.Component{
+// const HocComp = UiComponent => {
+//   const name = '邹明'
+//   return class x extends React.Component{
 
-    render () {
-      return (
-        <div>
-          <UiComponent name={name}/>
-          <div className='bar'>
-            <span>电影</span>
-            <span>影院</span>
-            <span>我的</span>
-          </div>
-        </div>
-      )
-    }
-  }
-}
+//     render () {
+//       return (
+//         <div>
+//           <UiComponent name={name}/>
+//           <div className='bar'>
+//             <span>电影</span>
+//             <span>影院</span>
+//             <span>我的</span>
+//           </div>
+//         </div>
+//       )
+//     }
+//   }
+// }
 
-export default HocComp;
+// export default HocComp;

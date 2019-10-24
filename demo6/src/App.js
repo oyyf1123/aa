@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import HocComp from './hoc/HocComp'
 import AnimateComp from './components/AnimateComp';
-import withTitleHoc, { connect111 } from './hoc/withTitleHoc';
+import withTitleHoc, { connect } from './hoc/withTitleHoc';
 
 function App({value}) {
   return (
@@ -22,6 +22,6 @@ function App({value}) {
 
 
 
-export default connect111(()=>{
+export default connect(()=>{
   return 'age';
 })(App)
