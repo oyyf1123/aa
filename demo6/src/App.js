@@ -7,7 +7,7 @@ import withTitleHoc, { connect111 } from './hoc/withTitleHoc';
 function App({value}) {
   return (
     <div className="App">
-      我的xingibe --- {value}
+      我的名字是 --- {name}
       <AnimateComp/>
     </div>
   );
@@ -23,5 +23,5 @@ function App({value}) {
 
 
 export default connect111(()=>{
-  return 'sex';
+  return 'age';
 })(App)
