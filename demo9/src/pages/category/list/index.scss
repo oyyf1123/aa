@@ -1,0 +1,16 @@
+@import '~/../../../../assets/global_style.scss';
+.list{
+  flex: 1;
+  .listNav{
+    height: .4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .1rem 0;
+  }
+  a{
+    &.active{
+      color:$themeColor;
+    }
+  }
+}

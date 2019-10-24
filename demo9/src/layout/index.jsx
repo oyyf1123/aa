@@ -10,7 +10,7 @@ export default class Layout extends Component {
   
     this.state = {
       tabFlag: true,
-      gobackFlag:false
+      gobackFlag:true
     }
   }
   
@@ -18,7 +18,7 @@ export default class Layout extends Component {
     const { tabFlag, gobackFlag } = this.state;
     return (
       <div className = "layout">
-        {tabFlag && <Tab tabFlag={tabFlag} gobackFlag={gobackFlag} />}
+        {tabFlag && <Tab tabFlag={tabFlag} gobackFlag={gobackFlag}  {...this.props} />}
         <RouterComp />
         <TabBar />
       </div>

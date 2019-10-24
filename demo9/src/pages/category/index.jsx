@@ -1,10 +1,11 @@
 import React from 'react';
 import './index.scss';
+import { Link } from 'react-router-dom';
 
 const Category = props => {
   return (
     <div className = "categoryBox">
-      category
+      <Link to = "/list">Category</Link>
     </div>
   );
 }

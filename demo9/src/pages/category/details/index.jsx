@@ -1,9 +1,10 @@
 import React from 'react';
+import './index.scss';
 
 const Details = props => {
   return (
-    <div>
-
+    <div className = "details">
+      details
     </div>
   );
 }

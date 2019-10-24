@@ -1,15 +1,15 @@
 import React from 'react';
 import './App.css';
 import Layout from './layout';
-import './utils/rem'
+import './utils/rem';
+import { withRouter } from 'react-router-dom';
 
-
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <Layout/>
+      <Layout {...props} />
     </div>
   );
 }
 
-export default App;
+export default withRouter(App) ;
