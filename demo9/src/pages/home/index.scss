@@ -1,35 +1,64 @@
-.homeBox{
+@import '~/../../../assets/global_style.scss';
+@import '~/../../../assets/onepx.scss';
+
+.homeBox {
   flex: 1;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  .Carousel-box{
+
+  .Carousel-box {
     padding: .05rem;
     padding-bottom: 0;
   }
-  .home-nav{
+
+  .home-nav {
     height: .44rem;
     display: flex;
     align-items: center;
-    .box1{
+
+    .box1 {
       flex: 1;
       font-size: .12rem;
     }
-    .box2{
+
+    .box2 {
       flex: 2;
       font-weight: bold;
     }
-    .box3{
+
+    .box3 {
       flex: 2;
       font-weight: bold;
     }
-    .box4{
+
+    .box4 {
       flex: 1;
       font-size: .13rem;
-
     }
+
+    a {
+      &.active {
+        position: relative;
+        color: $themeColor;
+      }
+      &.active::after{
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -12px;
+        left: 17%;
+        width: 21.33333vw;
+        height: 2px;
+        background-color: #ef4238;
+        transition: left .2s;
+      }
+    }
+
   }
-  .home-content{
+
+  .home-content {
     flex: 1;
+    height: 100%;
   }
 }

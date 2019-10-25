@@ -1,0 +1,55 @@
+.shopList {
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+
+  .movie-ul {
+    padding: .1rem .15rem;
+
+    li {
+      box-shadow: 0 0 .01rem #ccc;
+      margin-bottom: .1rem;
+      padding: .04rem;
+
+      .wrap-li {
+        display: flex;
+
+        .img-box {
+          margin-right: .1rem;
+          flex: 70;
+
+          img {
+            width: .6rem;
+            height: .9rem;
+          }
+        }
+
+        .text-box {
+          flex: 255;
+
+          p {
+            text-align: left;
+            font-size: .14rem;
+            margin-bottom: .04rem;
+          }
+        }
+
+        .btn-box {
+          flex: 50;
+          align-self: center;
+          margin-right: .1rem;
+
+          .am-button {
+            display: flex;
+            justify-content: center;
+
+            span {
+              font-size: .14rem !important;
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
