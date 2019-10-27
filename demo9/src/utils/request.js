@@ -75,7 +75,6 @@ const ajax = ({
         */
         axios.interceptors.request.use(function (config) {
             Toast.loading('给我冲!!', 1, () => {
-                console.log('Load complete !!!');
             });
             return config;
         }, function (error) {

@@ -7,20 +7,36 @@ import RouterComp from './router/routerComp';
 export default class Layout extends Component {
   constructor(props) {
     super(props)
-  
+
     this.state = {
       tabFlag: true,
-      gobackFlag:true
     }
   }
-  
+
+  componentDidMount () {
+    const pathName = this.props.location.pathname;
+    console.log(pathName);
+    if (pathName === '/details') this.setState({ tabFlag: false })
+  }
+
+  onlyBack () {
+    this.props.history.go(-1);
+  }
+
   render () {
-    const { tabFlag, gobackFlag } = this.state;
+    const { tabFlag } = this.state;
+    const pathName = this.props.location.pathname;
+
     return (
-      <div className = "layout">
-        {tabFlag && <Tab tabFlag={tabFlag} gobackFlag={gobackFlag}  {...this.props} />}
+      pathName === '/details' &&
+      <div className="layout">
         <RouterComp />
-        <TabBar />
+      </div>
+      ||
+      <div className="layout">
+        {tabFlag && <Tab tabFlag={tabFlag}  {...this.props} />}
+        <RouterComp />
+        {tabFlag && <TabBar />}
       </div>
     )
   }

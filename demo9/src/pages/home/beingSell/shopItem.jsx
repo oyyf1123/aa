@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button } from 'antd-mobile';
-import { bold } from '_ansi-colors@3.2.4@ansi-colors';
 
 const ShopItem = props => {
   function goDetail () {

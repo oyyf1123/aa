@@ -1,11 +1,21 @@
-import React, { Component } from 'react'
+import React, { Component,Fragment } from 'react'
+import withList from '../../../../hoc/withList'
 
-export default class list2 extends Component {
+class list2 extends Component {
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       
+    }
+  }
+  
   render() {
     return (
-      <div>
-        2
-      </div>
+      <Fragment>
+      </Fragment>
     )
   }
 }
+
+export default withList(list2);

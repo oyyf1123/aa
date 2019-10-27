@@ -1,3 +1,13 @@
-.details{
-  flex: 1;
+.details {
+  height: 100%;
+  display: flex;
+
+  .fa-chevron-circle-left {
+    position: absolute;
+    top: .1rem;
+    left: .1rem;
+    z-index: 999;
+    font-size: .3rem;
+    opacity: .3;
+  }
 }

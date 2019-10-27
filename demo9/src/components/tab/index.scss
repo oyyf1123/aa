@@ -3,7 +3,7 @@ header{
   width: 100%;
   height: .505rem;
   background: $themeColor;
-  display: flex;
+  display: flex!important;
   align-items: center;
   padding:0 .15rem;
   box-sizing: border-box;

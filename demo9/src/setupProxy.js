@@ -12,4 +12,8 @@ module.exports = function ( app ) {
     target: 'http://www.qinqin.net',
     changeOrigin: true 
   }))
+  app.use(proxy('/api',{
+    target: 'http://cmsjapi.ffquan.cn',
+    changeOrigin: true 
+  }))
 }

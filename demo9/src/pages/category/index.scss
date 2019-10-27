@@ -1,4 +1,7 @@
-.categoryBox{
+.categoryBox {
   flex: 1;
   height: 100%;
+  .am-tabs-default-bar-tab-active {
+    background: #ffffff;
+  }
 }

@@ -1,16 +1,36 @@
 @import '~/../../../../assets/global_style.scss';
-.list{
+
+.list {
   flex: 1;
-  .listNav{
-    height: .4rem;
+  display: flex;
+  flex-direction: column;
+
+  .listNav {
+    height: .5rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: .1rem 0;
-  }
-  a{
-    &.active{
-      color:$themeColor;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: .5rem;
+      i{
+        transform: rotateZ(90deg);
+      }
+      &.active {
+        color: $themeColor;
+      }
+      &.active::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #ef4238;
+        transition: left .2s;
+      }
     }
   }
+
 }
