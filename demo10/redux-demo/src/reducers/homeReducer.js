@@ -13,7 +13,6 @@ const homeReducer = (state = initState,action) => {
   switch (action.type) {
     case MOVIELIST:
       newState.data = action.payload;
-      console.log(action.payload)
       break;
   
     default:
